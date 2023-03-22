@@ -10,7 +10,7 @@
         <SidebarMenu />
       </div>
       <!-- Main content goes here -->
-      <slot></slot>
+      <!-- <slot></slot> -->
     </main>
     <footer>
       <!-- Footer content goes here -->

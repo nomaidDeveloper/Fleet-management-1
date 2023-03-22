@@ -5,7 +5,8 @@ import Login from '@/views/login.vue'
 import Signup from '@/views/signup.vue'
 import Users from '@/views/users.vue'
 import Cookies from "js-cookie";
-import AppLayout from '@/layouts/Layout.vue';
+import AppLayout from '../../layouts/Layout.vue';
+import LoginLayout from '../../layouts/loginLayout.vue';
 
 const routes = [
   {
@@ -29,16 +30,13 @@ const routes = [
     name: 'login',
     component: Login,
     meta: {
-      layout: null,
-    },
+      layout: LoginLayout
+    }
   },
   {
     path: '/signup',
     name: 'signup',
     component: Signup,
-    meta: {
-      layout: null,
-    },
   },
   {
     path: '/users',
@@ -47,6 +45,10 @@ const routes = [
     meta: {
       layout: AppLayout,
     },
+  },
+  {
+    path: '/logout',
+    name: 'logout',
   }
 ]
 
@@ -63,14 +65,13 @@ router.beforeEach((to, from, next) => {
 });
 
 router.beforeEach((to, from, next) => {
-  const publicPages = ['/login', '/register', '/'];
+  const publicPages = ['/login', '/signup'];
   const authRequired = !publicPages.includes(to.path);
   let loggedIn = Cookies.get('user');
   console.log("loggedinnnnn---",loggedIn);
   // trying to access a restricted page + not logged in
   // redirect to login page
   if (authRequired && !loggedIn) {
-    console.log();
     next('/login');
   } else {
     next();

@@ -3,9 +3,16 @@
     <div>
       <notifications position="top right" />
     </div>
-    <Layout>
+    <div v-if="$route.path == '/login' || $route.path == '/signup'">
+    <LoginLayout>
       <router-view />
-    </Layout>
+    </LoginLayout>
+     </div>
+     <div v-else>
+      <AppLayout>
+      <router-view />
+    </AppLayout>
+     </div>
     <!-- <div class="">
       <SidebarMenu/>
     </div>
@@ -15,10 +22,12 @@
 </template>
 
 <script>
+import AppLayout from '../layouts/Layout.vue';
+import LoginLayout from '../layouts/loginLayout.vue';
 export default {
   middleware: ["router-auth", "acl-user"],
   name: "App",
-  components: { },
+  components: { AppLayout,LoginLayout},
   data() {
     return {};
   },

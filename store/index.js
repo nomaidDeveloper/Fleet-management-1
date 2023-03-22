@@ -5,7 +5,7 @@ const store = createStore({
   state: {
     users: [],
     status: {},
-    user: null,
+    user: {},
     userTemp: null,
     isAuthenticated: false
   },
@@ -98,9 +98,24 @@ const store = createStore({
     },
   },
   getters: {
-    getUsers: (state) => state.users,
+    getUsers: (state) => state.user,
   },
-  
+  // plugins: [vuexPersist.plugin] ,
+  plugins: [
+    // Add the localStorage plugin
+    (store) => {
+      // Save the state to local storage on every mutation
+      store.subscribe((mutation, state) => {
+        localStorage.setItem('my-store', JSON.stringify(state))
+      })
+
+      // Load the state from local storage when the page is loaded
+      const stateFromStorage = JSON.parse(localStorage.getItem('my-store'))
+      if (stateFromStorage) {
+        store.replaceState(stateFromStorage)
+      }
+    },
+  ],
 });
 // store.subscribe((mutation, state) => {
 //   // Check if the user is not authenticated
@@ -116,4 +131,10 @@ const store = createStore({
 //     }
 //   }
 // })
+// const vuexPersist = new VuexPersist({
+//   key: 'user', // unique key for saving state properties in the browser storage
+//   storage: window.localStorage, // select the type of storage used (eg - localStorage, sessionStorage, etc)
+//   reducer: (state) => ({ userData: state.user }) // select the state properties that you want persisted 
+// })
+console.log(store.state.user,"store---------------------------------");
 export default store;

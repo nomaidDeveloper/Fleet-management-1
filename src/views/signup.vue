@@ -61,7 +61,7 @@ name:'Sign-up',
               this.$router.push("/login");
             }
         }).catch((err)=>{
-            console.log(err,"ree-----------------------");
+            console.log(err,"Error:");
         })
     },
     handleSubmit(e) {

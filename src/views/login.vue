@@ -60,9 +60,10 @@ export default {
     },
     logoutRedirect(){
       setTimeout(() => {
-        let userData = this.$store.state.user
+        console.log(this.$store.state.user,"this.$store.state.user*-----------");
+        // let userData = this.$store.state.user
         let cookieData = Cookies.get('user')
-          if (cookieData == undefined || cookieData == null || !userData) {
+          if (cookieData == undefined || cookieData == null ) {   //|| !userData
             this.$router.push("/login");
           }
           else {
@@ -73,6 +74,7 @@ export default {
       },
 
   },
+  layout: 'loginLayout'
 };
 </script>
 <template>

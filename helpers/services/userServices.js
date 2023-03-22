@@ -22,7 +22,6 @@ async function login(email, password) {
 }
 
 async function register(user) {
-    console.log(user,"user-----------in services ");
   const response = await axios.post(`${API_URL}/register`, user);
   return response.data;
 }
