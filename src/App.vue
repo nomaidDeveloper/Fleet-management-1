@@ -3,14 +3,14 @@
     <div>
       <notifications position="top right" />
     </div>
-    <div v-if="$route.path == '/login' || $route.path == '/signup'">
+    <div v-if="$route.path == '/login' || $route.path == '/signup' || $route.path == '/forgotpassword'">
     <LoginLayout>
       <router-view />
     </LoginLayout>
      </div>
      <div v-else>
       <AppLayout>
-      <router-view />
+      
     </AppLayout>
      </div>
     <!-- <div class="">

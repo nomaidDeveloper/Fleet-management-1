@@ -1,6 +1,6 @@
 
 <template>
-  <div class="left-side-menu pp-sidebar-menu">
+  <div class="left-side-menu pp-sidebar-menu sidebar">
     <simplebar class="h-100" data-simplebar>
       <!-- User box -->
     
@@ -110,5 +110,28 @@ export default {
 .menu-title{
   padding-left: 25px;
   min-height: 54px;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #333;
+  color: #fff;
 }
 </style>

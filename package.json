@@ -21,6 +21,7 @@
     "simplebar-vue": "^2.3.1",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
+    "vuelidate": "^0.7.7",
     "vuesax": "^4.0.1-alpha.25",
     "vuetify": "^3.1.10",
     "vuex": "^4.0.2",

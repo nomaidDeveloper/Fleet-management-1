@@ -3,7 +3,7 @@
     <div class="index-wrapper">
       <h1>!!!!!!  Home  !!!!!!</h1>
       <p>This is the Home page.</p>
-      <div>{{$store.state.user}}</div>
+      <div>{{$store.state.user.email}}</div>
     </div>
   </div>
 </template>

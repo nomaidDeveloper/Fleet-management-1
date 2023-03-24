@@ -1,16 +1,17 @@
 <template>
   <div class="app-layout">
     <header>
-      <div>
+      <div >
         <TopbarMenu />
       </div>
     </header>
     <main>
-      <div>
+      <div class="sidebar-layout">
         <SidebarMenu />
+        <router-view />
+        <!-- <slot></slot> -->
       </div>
       <!-- Main content goes here -->
-      <!-- <slot></slot> -->
     </main>
     <footer>
       <!-- Footer content goes here -->
@@ -27,11 +28,25 @@ export default {
 </script>
 <style>
 .app-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* min-height: 100vh; */
 }
-main {
+/* main {
   flex: 1;
+} */
+.sidebar-layout {
+    width: 300px;
+    background: transparent;
+    bottom: 44px;
+    position: absolute;
+    transition: all .1s ease-out;
+    top: 0;
+    padding: 96px 0 45px;
+    position: fixed;
 }
 </style>
