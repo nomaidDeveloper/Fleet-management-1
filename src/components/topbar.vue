@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="topbar">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
       <a href="/" class="navbar-brand">Fleet</a>
       <div class="navbar-nav mr-auto">
@@ -37,10 +37,6 @@
         </li>
       </div>
     </nav>
-
-    <div class="container">
-      <router-view />
-    </div>
   </div>
 </template>
 

@@ -14,7 +14,6 @@
           <template v-for="item in menuItems" :key="item.id">
             <li class="menu-title"  :id="item.id">
               <router-link :to="item.link"> {{item.label }}</router-link>
-             
             </li>
           
           </template>
