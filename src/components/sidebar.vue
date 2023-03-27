@@ -76,12 +76,14 @@ export default {
     role:'user',
     //icon: "ri-dashboard-line",
     link: '/',
+    active:false
   },
   {
     id: 2,
     label: "Users",
     role:'user',
     link: '/users',
+    active:false
   },
   // {
   //   id: 3,
@@ -100,6 +102,7 @@ export default {
     label: "About",
     role:'user',
     link: '/about',
+    active:false
   },
 ]
   })

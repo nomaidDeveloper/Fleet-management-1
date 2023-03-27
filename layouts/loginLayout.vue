@@ -2,7 +2,8 @@
     <div class="app-layout">
       <main>
         <!-- Main content goes here -->
-        <slot></slot>
+        <router-view />
+        <!-- <slot></slot> -->
       </main>
     </div>
   </template>

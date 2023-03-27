@@ -96,4 +96,7 @@ main {
   width: calc(100% - 250px);
   padding: 20px;
 }
+#layout {
+  background-color: #f2f4f8;
+}
 </style>
