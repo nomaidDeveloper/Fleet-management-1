@@ -2,7 +2,7 @@
   <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-md-9 col-lg-6 col-xl-5">
+        <div class="col-md-9 col-lg-6">
           <div class="mt-5">
             <img
               src="https://img.freepik.com/free-vector/forgot-password-concept-illustration_114360-1123.jpg?w=740&t=st=1679648922~exp=1679649522~hmac=eb873f78590822f361a1ac883164013dabaf4c5bad418a7d957e2cc815333924"
