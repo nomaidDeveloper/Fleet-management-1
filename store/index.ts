@@ -1,7 +1,27 @@
 import { createStore } from "vuex";
 import { userService } from "../helpers/services/userServices";
 
-const store = createStore({
+
+
+interface User {
+  // define the user properties
+  id: any;
+  name: string;
+  email: string;
+}
+
+interface Status {
+  // define the status properties
+}
+
+interface AppState {
+  users: User[];
+  status: Status;
+  user: User | null;
+  userTemp: User | null;
+  isAuthenticated: boolean;
+}
+const store = createStore<AppState>({
   state: {
     users: [],
     status: {},
