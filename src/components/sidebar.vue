@@ -14,7 +14,6 @@
           <template v-for="item in menuItems" :key="item.id">
             <li class="menu-title"  :id="item.id">
               <router-link :to="item.link"> {{item.label }}</router-link>
-             
             </li>
           
           </template>
@@ -77,12 +76,14 @@ export default {
     role:'user',
     //icon: "ri-dashboard-line",
     link: '/',
+    active:false
   },
   {
     id: 2,
     label: "Users",
     role:'user',
     link: '/users',
+    active:false
   },
   // {
   //   id: 3,
@@ -101,6 +102,7 @@ export default {
     label: "About",
     role:'user',
     link: '/about',
+    active:false
   },
 ]
   })

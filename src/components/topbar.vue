@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
+  <div id="topbar">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a href="/" class="navbar-brand">Fleet</a>
+      <div class="logo-img">
+        <img src="../assets/fleet.jpg" class="img-fluid logo" alt="logo" />
+        <a href="/" class="ml-2 navbar-brand">Fleet</a>
+      </div>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link to="/" class="nav-link">
@@ -37,10 +40,6 @@
         </li>
       </div>
     </nav>
-
-    <div class="container">
-      <router-view />
-    </div>
   </div>
 </template>
 
@@ -65,3 +64,16 @@ export default {
   },
 };
 </script>
+<style>
+.logo-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-left: 25px;
+}
+.logo {
+  margin-right: 20px;
+  width: 25px;
+}
+</style>
