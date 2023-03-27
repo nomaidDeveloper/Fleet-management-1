@@ -2,7 +2,7 @@
   <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-md-9 col-lg-6">
+        <div class="col-md-9 col-lg-6 col-xl-5">
           <div class="mt-5">
             <img
               src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=740&t=st=1679643289~exp=1679643889~hmac=2225ec4c09cf892c64dd3a395c694da61de7ad176a32c610164deb218fbadf3d"

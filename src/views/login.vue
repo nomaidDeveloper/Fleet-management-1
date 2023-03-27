@@ -101,7 +101,7 @@ export default {
   <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-md-9 col-lg-6">
+        <div class="col-md-9 col-lg-6 col-xl-5">
           <div class="mt-5">
             <img
               src="https://img.freepik.com/free-vector/computer-login-concept-illustration_114360-7962.jpg?w=740&t=st=1679648423~exp=1679649023~hmac=7a9b1eb39819585dec7edb0197dbf8cc637682b20abdcbd8e15c6661fd6dcad3"
