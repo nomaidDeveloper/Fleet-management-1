@@ -12,9 +12,8 @@
           <!--<li v-if='$store.state.authfack.user && $store.state.authfack.user.role != "admin"' class=""><a class="side-nav-link-ref" href='#'><div class='flex'> <i class="ri-braces-line"></i><div class="flex beamerTrigger">What's new</div></div></a></li>-->
        
           <template v-for="item in menuItems" :key="item.id">
-            <li class="menu-title"  :id="item.id">
+            <li class="menu-title"  :id:any="item.id">
               <router-link :to="item.link"> {{item.label }}</router-link>
-             
             </li>
           
           </template>
@@ -61,7 +60,7 @@
     </div>
   </div>
 </template> -->
-<script>
+<script lang="ts">
 import 'simplebar/dist/simplebar.min.css'; 
 
 export default {
@@ -77,12 +76,14 @@ export default {
     role:'user',
     //icon: "ri-dashboard-line",
     link: '/',
+    active:false
   },
   {
     id: 2,
     label: "Users",
     role:'user',
     link: '/users',
+    active:false
   },
   // {
   //   id: 3,
@@ -101,6 +102,7 @@ export default {
     label: "About",
     role:'user',
     link: '/about',
+    active:false
   },
 ]
   })

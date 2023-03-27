@@ -1,36 +1,27 @@
 <template>
-  <div>
-    <div>
-      <notifications position="top right" />
-    </div>
-    <div v-if="$route.path == '/login' || $route.path == '/signup' || $route.path == '/forgotpassword'">
-    <LoginLayout>
-      <router-view />
-    </LoginLayout>
-     </div>
-     <div v-else>
-      <AppLayout>
-      
-    </AppLayout>
-     </div>
-    <!-- <div class="">
-      <SidebarMenu/>
-    </div>
-    <div class=""><router-view></router-view></div>
-     -->
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
 
-<script>
-import AppLayout from '../layouts/Layout.vue';
-import LoginLayout from '../layouts/loginLayout.vue';
-export default {
-  middleware: ["router-auth", "acl-user"],
-  name: "App",
-  components: { AppLayout,LoginLayout},
-  data() {
-    return {};
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import HelloWorld from './components/HelloWorld.vue';
+
+@Options({
+  components: {
+    HelloWorld,
   },
-};
+})
+export default class App extends Vue {}
 </script>
-<style></style>
+
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>

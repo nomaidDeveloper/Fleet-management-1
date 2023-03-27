@@ -4,12 +4,17 @@ import About from '@/components/About.vue';
 import Login from '@/views/login.vue';
 import Signup from '@/views/signup.vue';
 import Users from '@/views/users.vue';
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 import AppLayout from '../../layouts/Layout.vue';
 import LoginLayout from '../../layouts/loginLayout.vue';
 import ForgotPassword from '@/views/forgot.vue';
-
-const routes = [
+interface User {
+  path: any;
+  name: any;
+  component: any;
+  meta: any;
+}
+const routes :User[] = [
   {
     path: '/',
     name: 'Home',
@@ -38,6 +43,8 @@ const routes = [
     path: '/signup',
     name: 'signup',
     component: Signup,
+    meta: {
+    },
   },
   {
     path: '/users',
@@ -50,11 +57,14 @@ const routes = [
   {
     path: '/logout',
     name: 'logout',
+    component: '',
+    meta: {},
   },
   {
     path: '/forgotpassword',
     name: 'forgotpassword',
     component: ForgotPassword,
+    meta: {},
   },
 ]
 
