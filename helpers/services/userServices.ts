@@ -11,7 +11,7 @@ async function login(email:String, password:String) {
  return await axios.post(`${API_URL}/login`, user)
       .then(res => {
         if (res.data.token) {
-            this.$router
+            // this.$router
             Cookies.set("user", JSON.stringify(res));
           }
           return res.data;

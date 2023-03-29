@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import './assets/styles.css';
+// import './assets/styles.css';
 import Notifications from '@kyvg/vue3-notification'
 import SimpleBarVue from 'simplebar-vue';
 import Vuex from 'vuex';
