@@ -4,7 +4,7 @@ import About from '@/components/About.vue';
 import Login from '@/views/login.vue';
 import Signup from '@/views/signup.vue';
 import Users from '@/views/users.vue';
-// import Cookies from "js-cookie";
+import Cookies from "js-cookie";
 import AppLayout from '../../layouts/Layout.vue';
 import LoginLayout from '../../layouts/loginLayout.vue';
 import ForgotPassword from '@/views/forgot.vue';
@@ -83,7 +83,7 @@ router.beforeEach((to, from, next) => {
 router.beforeEach((to, from, next) => {
   const publicPages = ['/login', '/signup','/forgotpassword'];
   const authRequired = !publicPages.includes(to.path);
-  let loggedIn = Cookies.get('user');
+  const loggedIn = Cookies.get('user');
   console.log("loggedinnnnn---",loggedIn);
   // trying to access a restricted page + not logged in
   // redirect to login page
