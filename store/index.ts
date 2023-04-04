@@ -17,7 +17,7 @@ interface Status {
 interface AppState {
   users: User[];
   status: Status;
-  user: User | null | {};
+  user: User | null;
   userTemp: User | null;
   isAuthenticated: boolean;
 }
@@ -100,7 +100,7 @@ const store = createStore<AppState>({
       userService.register({ ...user, domain: window.location.host }).then(
         (user) => {
           commit("registerSuccess", user);
-          // this.$router.push({ path: "/login" });
+          this.$router.push({ path: "/login" });
         },
         (error) => {
           commit("registerFailure", error);
@@ -130,9 +130,7 @@ const store = createStore<AppState>({
       })
 
       // Load the state from local storage when the page is loaded
-      const stateFromStorage:any = localStorage.getItem('my-store');
-      stateFromStorage !== null ? JSON.parse(stateFromStorage) : ''
-      // const stateFromStorage = JSON.parse(localStorage.getItem('my-store'))
+      const stateFromStorage = JSON.parse(localStorage.getItem('my-store'))
       if (stateFromStorage) {
         store.replaceState(stateFromStorage)
       }
