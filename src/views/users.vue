@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     async getAll() {
-      let loggedIn = JSON.parse(Cookies.get("user"));
+      const loggedIn = JSON.parse(Cookies.get("user"));
       let token = loggedIn.data.token;
       let config = {
         headers: {
